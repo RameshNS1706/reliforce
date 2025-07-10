@@ -175,7 +175,6 @@
    "fieldtype": "Select",
    "label": "Visit Type",
    "options": "Lead Visit\nCustomer Visit\nMeeting/Training\nIn-Transit",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -422,7 +421,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-10 14:53:55.653614",
+ "modified": "2025-07-10 15:18:28.429631",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "DCR Visit Entry",
