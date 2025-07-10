@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-10 10:46:27.751483",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "from_territory",
+  "from_territory_latitude",
+  "from_territory_longitude",
+  "to_territory",
+  "to_territory_latitude",
+  "to_territory_longitude",
+  "distance_in_kms",
+  "map_distance_in_kms",
+  "column_break_vzyv",
+  "map"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_territory",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Territory",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_territory_latitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "From Territory Latitude"
+  },
+  {
+   "fieldname": "from_territory_longitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "From Territory Longitude"
+  },
+  {
+   "fieldname": "to_territory",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To Territory",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_territory_latitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "To Territory Latitude"
+  },
+  {
+   "fieldname": "to_territory_longitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "To Territory Longitude"
+  },
+  {
+   "fieldname": "distance_in_kms",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Distance in Kms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "map_distance_in_kms",
+   "fieldtype": "Float",
+   "label": "Map Distance in Kms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vzyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "HTML",
+   "label": "Map",
+   "options": "<div id=\"map\" style=\"width: 100%; height: 380px;\"></div>"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-10 10:51:07.626456",
+ "modified_by": "Administrator",
+ "module": "Reliforce",
+ "name": "Distance Chart",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

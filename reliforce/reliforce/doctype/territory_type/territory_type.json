@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:territory_type",
+ "creation": "2025-07-10 09:40:05.847831",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "territory_type",
+  "territory_type_description",
+  "column_break_hsoy"
+ ],
+ "fields": [
+  {
+   "fieldname": "territory_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Territory Type",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "territory_type_description",
+   "fieldtype": "Small Text",
+   "label": "Territory Type Description"
+  },
+  {
+   "fieldname": "column_break_hsoy",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-10 09:42:34.271314",
+ "modified_by": "Administrator",
+ "module": "Reliforce",
+ "name": "Territory Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

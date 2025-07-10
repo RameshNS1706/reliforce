@@ -1,0 +1,451 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-10 14:16:52.890380",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_section",
+  "naming_series",
+  "sales_person",
+  "employee",
+  "designation",
+  "head_quarter",
+  "employee_user",
+  "session_user",
+  "column_break_huia",
+  "dcr_visit_details_section",
+  "journey_planner",
+  "journey_planner_date",
+  "dcr_visit_date",
+  "dcr_visit_datetime",
+  "visit_type",
+  "lead",
+  "lead_name",
+  "lead_territory",
+  "customer",
+  "customer_name",
+  "customer_territory",
+  "lead_customer",
+  "territory",
+  "column_break_jybl",
+  "daily_allowance_section",
+  "territory_type",
+  "daily_allowance_amount",
+  "attach_daily_allowance_bills",
+  "column_break_rpq4",
+  "travel_allowance_section",
+  "from_city",
+  "to_city",
+  "distance_in_kms",
+  "rate_per_kms",
+  "travel_allowance_amount",
+  "attach_travel_allowance_bills",
+  "column_break_ja4x",
+  "food_allowance_section",
+  "food_allowance_amount",
+  "attach_food_allowance_bills",
+  "column_break_agru",
+  "dcr_remarks_section",
+  "remarks",
+  "column_break_u0k9",
+  "coordinates_section",
+  "latitude",
+  "longitude",
+  "accuracy",
+  "map_distance_in_kms",
+  "address",
+  "from_city_latitude",
+  "from_city_longitude",
+  "column_break_ng6b",
+  "map",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Person",
+   "options": "Sales Person",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sales_person.employee",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.custom_head_quarter",
+   "fieldname": "head_quarter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Head Quarter",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.user_id",
+   "fieldname": "employee_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "session_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Session User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_huia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dcr_visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "DCR Visit Details"
+  },
+  {
+   "fieldname": "journey_planner",
+   "fieldtype": "Link",
+   "label": "Journey Planner",
+   "options": "Journey Planner",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "journey_planner_date",
+   "fieldtype": "Date",
+   "label": "Journey Planner Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "dcr_visit_date",
+   "fieldtype": "Date",
+   "label": "DCR Visit Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "dcr_visit_datetime",
+   "fieldtype": "Datetime",
+   "label": "DCR Visit Datetime",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_type",
+   "fieldtype": "Select",
+   "label": "Visit Type",
+   "options": "Lead Visit\nCustomer Visit\nMeeting/Training\nIn-Transit",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "lead.company_name",
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "label": "Lead Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "lead.territory",
+   "fieldname": "lead_territory",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Lead Territory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.territory",
+   "fieldname": "customer_territory",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Customer Territory",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_customer",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Lead Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jybl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "daily_allowance_section",
+   "fieldtype": "Section Break",
+   "label": "Daily Allowance"
+  },
+  {
+   "fieldname": "territory_type",
+   "fieldtype": "Data",
+   "label": "Territory Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "daily_allowance_amount",
+   "fieldtype": "Currency",
+   "label": "Daily Allowance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rpq4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_daily_allowance_bills",
+   "fieldtype": "Attach",
+   "label": "Attach Daily Allowance Bills"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "travel_allowance_section",
+   "fieldtype": "Section Break",
+   "label": "Travel Allowance"
+  },
+  {
+   "fieldname": "from_city",
+   "fieldtype": "Data",
+   "label": "From City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "to_city",
+   "fieldtype": "Data",
+   "label": "To City",
+   "read_only": 1
+  },
+  {
+   "fieldname": "distance_in_kms",
+   "fieldtype": "Float",
+   "label": "Distance in Kms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate_per_kms",
+   "fieldtype": "Currency",
+   "label": "Rate Per Kms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "travel_allowance_amount",
+   "fieldtype": "Currency",
+   "label": "Travel Allowance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_travel_allowance_bills",
+   "fieldtype": "Attach",
+   "label": "Attach Travel Allowance Bills"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "food_allowance_section",
+   "fieldtype": "Section Break",
+   "label": "Food Allowance"
+  },
+  {
+   "fieldname": "food_allowance_amount",
+   "fieldtype": "Currency",
+   "label": "Food Allowance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attach_food_allowance_bills",
+   "fieldtype": "Attach",
+   "label": "Attach Food Allowance Bills"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DCR Visit Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ja4x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_agru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dcr_remarks_section",
+   "fieldtype": "Section Break",
+   "label": "DCR Remarks"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_u0k9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "coordinates_section",
+   "fieldtype": "Section Break",
+   "label": "Coordinates"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accuracy",
+   "fieldtype": "Float",
+   "label": "Accuracy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "map_distance_in_kms",
+   "fieldtype": "Float",
+   "label": "Map Distance in Kms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_city_latitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "From City Latitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_city_longitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "From City Longitude",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ng6b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "HTML",
+   "label": "Map",
+   "options": "<div id=\"map\" style=\"width: 100%; height: 380px;\"></div>"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-10 14:53:55.653614",
+ "modified_by": "Administrator",
+ "module": "Reliforce",
+ "name": "DCR Visit Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

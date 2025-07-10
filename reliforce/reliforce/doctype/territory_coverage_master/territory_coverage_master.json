@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-10 09:53:31.749025",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_section",
+  "naming_series",
+  "sales_person",
+  "employee",
+  "designation",
+  "head_quarter",
+  "column_break_f6qf",
+  "territory_details_section",
+  "territory_detail",
+  "column_break_gq5a",
+  "other_details_section",
+  "remarks",
+  "column_break_phjh"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Person",
+   "options": "Sales Person",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sales_person.employee",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.custom_head_quarter",
+   "fieldname": "head_quarter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Head Quarter",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_f6qf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "territory_details_section",
+   "fieldtype": "Section Break",
+   "label": "Territory Details"
+  },
+  {
+   "fieldname": "territory_detail",
+   "fieldtype": "Table",
+   "label": "Territory Detail",
+   "options": "Territory Coverage Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gq5a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_phjh",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-10 10:05:12.523864",
+ "modified_by": "Administrator",
+ "module": "Reliforce",
+ "name": "Territory Coverage Master",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

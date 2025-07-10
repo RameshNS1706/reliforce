@@ -1,0 +1,246 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-10 11:05:05.031398",
+ "default_view": "Calendar",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_section",
+  "naming_series",
+  "journey_planner_date",
+  "sales_person",
+  "employee",
+  "designation",
+  "head_quarter",
+  "employee_user",
+  "session_user",
+  "journey_details_section",
+  "starts_on",
+  "ends_on",
+  "start",
+  "end",
+  "territory",
+  "subject",
+  "color",
+  "full_day",
+  "column_break_t4n8",
+  "lead_visit_details_section",
+  "lead_visit_detail",
+  "column_break_i5gj",
+  "customer_visit_details_section",
+  "customer_visit_detail",
+  "column_break_7vfp",
+  "contact_visit_details_section",
+  "contact_visit_detail",
+  "column_break_woqk"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "journey_planner_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Journey Planner Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Person",
+   "options": "Sales Person",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sales_person.employee",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.custom_head_quarter",
+   "fieldname": "head_quarter",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Head Quarter",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "session_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Session User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "journey_details_section",
+   "fieldtype": "Section Break",
+   "label": "Journey Details"
+  },
+  {
+   "fieldname": "starts_on",
+   "fieldtype": "Datetime",
+   "label": "Starts On"
+  },
+  {
+   "fieldname": "ends_on",
+   "fieldtype": "Datetime",
+   "label": "Ends On"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "label": "Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Datetime",
+   "label": "End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Small Text",
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "default": "0",
+   "fieldname": "full_day",
+   "fieldtype": "Check",
+   "label": "Full Day"
+  },
+  {
+   "fieldname": "column_break_t4n8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_woqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "lead_visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Lead Visit Details"
+  },
+  {
+   "fieldname": "lead_visit_detail",
+   "fieldtype": "Table",
+   "label": "Lead Visit Detail",
+   "options": "Leads",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "customer_visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Visit Details"
+  },
+  {
+   "fieldname": "customer_visit_detail",
+   "fieldtype": "Table",
+   "label": "Customer Visit Detail",
+   "options": "Customers",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contact_visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Visit Details"
+  },
+  {
+   "fieldname": "contact_visit_detail",
+   "fieldtype": "Table",
+   "label": "Contact Visit Detail",
+   "options": "Contacts",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_i5gj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_7vfp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2025-07-10 13:38:51.219012",
+ "modified_by": "Administrator",
+ "module": "Reliforce",
+ "name": "Journey Planner",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
