@@ -36,12 +36,14 @@
    "reqd": 1
   },
   {
+   "fetch_from": "from_territory.custom_latitude",
    "fieldname": "from_territory_latitude",
    "fieldtype": "Float",
    "hidden": 1,
    "label": "From Territory Latitude"
   },
   {
+   "fetch_from": "from_territory.custom_longitude",
    "fieldname": "from_territory_longitude",
    "fieldtype": "Float",
    "hidden": 1,
@@ -56,12 +58,14 @@
    "reqd": 1
   },
   {
+   "fetch_from": "to_territory.custom_latitude",
    "fieldname": "to_territory_latitude",
    "fieldtype": "Float",
    "hidden": 1,
    "label": "To Territory Latitude"
   },
   {
+   "fetch_from": "to_territory.custom_longitude",
    "fieldname": "to_territory_longitude",
    "fieldtype": "Float",
    "hidden": 1,
@@ -94,7 +98,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 10:51:07.626456",
+ "modified": "2025-07-11 14:21:46.258076",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "Distance Chart",

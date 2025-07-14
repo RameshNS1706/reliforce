@@ -28,6 +28,24 @@ app_license = "mit"
 # app_include_css = "/assets/reliforce/css/reliforce.css"
 # app_include_js = "/assets/reliforce/js/reliforce.js"
 
+app_include_js = [
+	"https://openlayers.org/api/2.13.1/OpenLayers.js",
+	"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
+	"https://cdn.maptiler.com/maptiler-sdk-js/v2.0.3/maptiler-sdk.umd.min.js",
+	"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js",
+	"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js",
+	
+]
+
+app_include_css = [
+	"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css",
+	"https://cdn.maptiler.com/maptiler-sdk-js/v2.0.3/maptiler-sdk.css",
+	"https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css",
+	"https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css",
+	
+]
+
+
 # include js, css files in header of web template
 # web_include_css = "/assets/reliforce/css/reliforce.css"
 # web_include_js = "/assets/reliforce/js/reliforce.js"
@@ -47,6 +65,30 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+doctype_js = {
+	"Lead" : "public/js/doctype_custom/lead.js",
+	"Customer" : "public/js/doctype_custom/customer.js",
+	"Territory": "public/js/doctype_custom/territory.js",
+	"Attendance" : "public/js/doctype_custom/attendance.js",
+	"Distance Chart": "public/js/leaflet-routing-machine.js",
+	"Distance Chart": "public/js/Control.Geocoder.js",
+	"DCR Visit Entry": "public/js/leaflet-routing-machine.js",
+	"DCR Visit Entry": "public/js/Control.Geocoder.js",
+	"Geo Maps": "public/js/leaflet-routing-machine.js",
+	"Geo Maps": "public/js/Control.Geocoder.js",
+}
+
+doctype_css = {    
+	"Distance Chart": "public/css/leaflet-routing-machine.css",
+	"Distance Chart": "public/css/Control.Geocoder.css",
+	"DCR Visit Entry": "public/css/leaflet-routing-machine.css",
+	"DCR Visit Entry": "public/css/Control.Geocoder.css",
+	"Geo Maps": "public/css/leaflet-routing-machine.css",
+	"Geo Maps": "public/css/Control.Geocoder.css",
+}
+
+
 
 # Svg Icons
 # ------------------

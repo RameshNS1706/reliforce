@@ -1,0 +1,409 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-07-14 10:33:36.300434",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_section",
+  "naming_series",
+  "sales_person",
+  "employee",
+  "designation",
+  "head_quarter",
+  "employee_user",
+  "session_user",
+  "column_break_c8gp",
+  "dcr_mom_details_section",
+  "dcr_visit_no",
+  "dcr_visit_date",
+  "dcr_mom_date",
+  "dcr_mom_date_time",
+  "lead",
+  "lead_name",
+  "customer",
+  "customer_name",
+  "lead_customer",
+  "territory",
+  "visit_purpose",
+  "contact_name",
+  "contact_designation",
+  "contact_availability_status",
+  "brands_discussed_section",
+  "brands",
+  "products_discussed_section",
+  "products",
+  "section_break_4epa",
+  "product_sample",
+  "pob_order",
+  "column_break_fgiv",
+  "product_samples_section",
+  "product_sample_details",
+  "column_break_kfav",
+  "pob_orders_section",
+  "pob_order_details",
+  "column_break_rjo7",
+  "section_break_uhmn",
+  "next_visit_date",
+  "remarks",
+  "column_break_b3bo",
+  "coordinates_section",
+  "latitude",
+  "longitude",
+  "accuracy",
+  "address",
+  "column_break_xytv",
+  "map",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DCR MOM Entry",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Person",
+   "options": "Sales Person",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "sales_person.employee",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.custom_head_quarter",
+   "fieldname": "head_quarter",
+   "fieldtype": "Data",
+   "label": "Head Quarter",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.user_id",
+   "fieldname": "employee_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Employee User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "session_user",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Session User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_c8gp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dcr_mom_details_section",
+   "fieldtype": "Section Break",
+   "label": "DCR MOM Details"
+  },
+  {
+   "fieldname": "dcr_visit_no",
+   "fieldtype": "Link",
+   "label": "DCR Visit No",
+   "options": "DCR Visit Entry",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fetch_from": "dcr_visit_no.dcr_visit_date",
+   "fieldname": "dcr_visit_date",
+   "fieldtype": "Date",
+   "label": "DCR Visit Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "dcr_mom_date",
+   "fieldtype": "Date",
+   "label": "DCR MOM Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "dcr_mom_date_time",
+   "fieldtype": "Datetime",
+   "label": "DCR MOM Date Time",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead"
+  },
+  {
+   "fetch_from": "lead.company_name",
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "label": "Lead Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lead_customer",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Lead Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "Territory",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_purpose",
+   "fieldtype": "Select",
+   "label": "Visit Purpose",
+   "options": "Regular Follow-Up\nProduct Sample\nPOB\nProduct Promotion\nComplaint Handling",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_name",
+   "fieldtype": "Link",
+   "label": "Contact Name",
+   "options": "Contact",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "contact_name.designation",
+   "fieldname": "contact_designation",
+   "fieldtype": "Data",
+   "label": "Contact Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_availability_status",
+   "fieldtype": "Select",
+   "label": "Contact Availability Status",
+   "options": "Available\nNot Available",
+   "reqd": 1
+  },
+  {
+   "fieldname": "brands_discussed_section",
+   "fieldtype": "Section Break",
+   "label": "Brands Discussed"
+  },
+  {
+   "fieldname": "brands",
+   "fieldtype": "Table MultiSelect",
+   "label": "Brands",
+   "options": "Brands"
+  },
+  {
+   "fieldname": "products_discussed_section",
+   "fieldtype": "Section Break",
+   "label": "Products Discussed"
+  },
+  {
+   "fieldname": "products",
+   "fieldtype": "Table MultiSelect",
+   "label": "Products",
+   "options": "Items"
+  },
+  {
+   "fieldname": "section_break_4epa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "product_sample",
+   "fieldtype": "Check",
+   "label": "Product Sample"
+  },
+  {
+   "default": "0",
+   "fieldname": "pob_order",
+   "fieldtype": "Check",
+   "label": "POB Order"
+  },
+  {
+   "fieldname": "column_break_fgiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_samples_section",
+   "fieldtype": "Section Break",
+   "label": "Product Samples"
+  },
+  {
+   "fieldname": "product_sample_details",
+   "fieldtype": "Table",
+   "label": "Product Sample Details",
+   "options": "Product Samples"
+  },
+  {
+   "fieldname": "column_break_kfav",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pob_orders_section",
+   "fieldtype": "Section Break",
+   "label": "POB Orders"
+  },
+  {
+   "fieldname": "pob_order_details",
+   "fieldtype": "Table",
+   "label": "POB Order Details",
+   "options": "POB Order"
+  },
+  {
+   "fieldname": "column_break_rjo7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_uhmn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "next_visit_date",
+   "fieldtype": "Date",
+   "label": "Next Visit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_b3bo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "coordinates_section",
+   "fieldtype": "Section Break",
+   "label": "Coordinates"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "accuracy",
+   "fieldtype": "Float",
+   "label": "Accuracy",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xytv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "map",
+   "fieldtype": "HTML",
+   "label": "Map",
+   "options": "<div id=\"map\" style=\"width: 100%; height: 380px;\"></div>"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-14 11:59:59.047111",
+ "modified_by": "Administrator",
+ "module": "Reliforce",
+ "name": "DCR MOM Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -19,7 +19,7 @@
   "journey_planner",
   "journey_planner_date",
   "dcr_visit_date",
-  "dcr_visit_datetime",
+  "dcr_visit_date_time",
   "visit_type",
   "lead",
   "lead_name",
@@ -159,14 +159,6 @@
    "fieldname": "dcr_visit_date",
    "fieldtype": "Date",
    "label": "DCR Visit Date",
-   "read_only": 1,
-   "reqd": 1
-  },
-  {
-   "default": "Now",
-   "fieldname": "dcr_visit_datetime",
-   "fieldtype": "Datetime",
-   "label": "DCR Visit Datetime",
    "read_only": 1,
    "reqd": 1
   },
@@ -415,13 +407,21 @@
    "fieldtype": "HTML",
    "label": "Map",
    "options": "<div id=\"map\" style=\"width: 100%; height: 380px;\"></div>"
+  },
+  {
+   "default": "Now",
+   "fieldname": "dcr_visit_date_time",
+   "fieldtype": "Datetime",
+   "label": "DCR Visit Date Time",
+   "read_only": 1,
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-10 15:18:28.429631",
+ "modified": "2025-07-14 11:29:14.797701",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "DCR Visit Entry",
