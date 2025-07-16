@@ -115,23 +115,29 @@
   {
    "fieldname": "starts_on",
    "fieldtype": "Datetime",
-   "label": "Starts On"
+   "hidden": 1,
+   "label": "Starts On",
+   "read_only": 1
   },
   {
    "fieldname": "ends_on",
    "fieldtype": "Datetime",
-   "label": "Ends On"
+   "hidden": 1,
+   "label": "Ends On",
+   "read_only": 1
   },
   {
    "fieldname": "start",
    "fieldtype": "Datetime",
    "label": "Start",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "end",
    "fieldtype": "Datetime",
    "label": "End",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -217,8 +223,14 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
- "links": [],
- "modified": "2025-07-10 13:38:51.219012",
+ "links": [
+  {
+   "group": "DCR Visit Entry",
+   "link_doctype": "DCR Visit Entry",
+   "link_fieldname": "journey_planner"
+  }
+ ],
+ "modified": "2025-07-15 11:08:44.029455",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "Journey Planner",
