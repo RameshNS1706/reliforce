@@ -47,6 +47,18 @@
   "food_allowance_amount",
   "attach_food_allowance_bills",
   "column_break_agru",
+  "other_expenses_section",
+  "expense_claim",
+  "expense_claim_detail",
+  "expense_claim_total",
+  "column_break_ws2x",
+  "total_expense_summary_section",
+  "da_amount",
+  "ta_amount",
+  "food_amount",
+  "other_expense_amount",
+  "total_amount",
+  "column_break_pb1d",
   "dcr_remarks_section",
   "remarks",
   "column_break_u0k9",
@@ -145,7 +157,8 @@
    "label": "Journey Planner",
    "options": "Journey Planner",
    "read_only": 1,
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "journey_planner_date",
@@ -415,13 +428,81 @@
    "label": "DCR Visit Date Time",
    "read_only": 1,
    "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "other_expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Other Expenses"
+  },
+  {
+   "default": "0",
+   "fieldname": "expense_claim",
+   "fieldtype": "Check",
+   "label": "Expense Claim"
+  },
+  {
+   "fieldname": "expense_claim_detail",
+   "fieldtype": "Table",
+   "label": "Expense Claim Detail",
+   "options": "Expense Detail"
+  },
+  {
+   "fieldname": "expense_claim_total",
+   "fieldtype": "Currency",
+   "label": "Expense Claim Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ws2x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "total_expense_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Total Expense Summary"
+  },
+  {
+   "fieldname": "da_amount",
+   "fieldtype": "Currency",
+   "label": "DA Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ta_amount",
+   "fieldtype": "Currency",
+   "label": "TA Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "food_amount",
+   "fieldtype": "Currency",
+   "label": "Food Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "other_expense_amount",
+   "fieldtype": "Currency",
+   "label": "Other Expense Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pb1d",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-14 11:29:14.797701",
+ "modified": "2025-07-16 17:39:31.539707",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "DCR Visit Entry",
