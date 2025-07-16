@@ -69,6 +69,7 @@
    "search_index": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "employee_details_section",
    "fieldtype": "Section Break",
    "label": "Employee Details"
@@ -173,10 +174,12 @@
    "reqd": 1
   },
   {
+   "fetch_from": "dcr_visit_no.lead",
    "fieldname": "lead",
    "fieldtype": "Link",
    "label": "Lead",
-   "options": "Lead"
+   "options": "Lead",
+   "read_only": 1
   },
   {
    "fetch_from": "lead.company_name",
@@ -186,10 +189,12 @@
    "read_only": 1
   },
   {
+   "fetch_from": "dcr_visit_no.customer",
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "read_only": 1
   },
   {
    "fetch_from": "customer.customer_name",
@@ -199,6 +204,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "dcr_visit_no.lead_customer",
    "fieldname": "lead_customer",
    "fieldtype": "Data",
    "hidden": 1,
@@ -206,17 +212,19 @@
    "read_only": 1
   },
   {
+   "fetch_from": "dcr_visit_no.territory",
    "fieldname": "territory",
    "fieldtype": "Link",
    "label": "Territory",
    "options": "Territory",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "visit_purpose",
    "fieldtype": "Select",
    "label": "Visit Purpose",
-   "options": "Regular Follow-Up\nProduct Sample\nPOB\nProduct Promotion\nComplaint Handling",
+   "options": "Regular Follow-Up\nProduct Sample\nPOB\nProduct Promotion\nComplaint Handling\nSymposium",
    "reqd": 1
   },
   {
@@ -241,6 +249,7 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.contact_availability_status=='Available'",
    "fieldname": "brands_discussed_section",
    "fieldtype": "Section Break",
    "label": "Brands Discussed"
@@ -252,6 +261,7 @@
    "options": "Brands"
   },
   {
+   "depends_on": "eval:doc.contact_availability_status=='Available'",
    "fieldname": "products_discussed_section",
    "fieldtype": "Section Break",
    "label": "Products Discussed"
@@ -276,18 +286,22 @@
    "default": "0",
    "fieldname": "pob_order",
    "fieldtype": "Check",
-   "label": "POB Order"
+   "hidden": 1,
+   "label": "POB Order",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_fgiv",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval: doc.product_sample==1",
    "fieldname": "product_samples_section",
    "fieldtype": "Section Break",
    "label": "Product Samples"
   },
   {
+   "depends_on": "eval: doc.product_sample==1",
    "fieldname": "product_sample_details",
    "fieldtype": "Table",
    "label": "Product Sample Details",
@@ -298,15 +312,21 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.pob_order==1",
    "fieldname": "pob_orders_section",
    "fieldtype": "Section Break",
-   "label": "POB Orders"
+   "hidden": 1,
+   "label": "POB Orders",
+   "read_only": 1
   },
   {
+   "depends_on": "eval:doc.pob_order==1",
    "fieldname": "pob_order_details",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "POB Order Details",
-   "options": "POB Order"
+   "options": "POB Order",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_rjo7",
@@ -333,6 +353,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "collapsible": 1,
    "fieldname": "coordinates_section",
    "fieldtype": "Section Break",
    "label": "Coordinates"
@@ -380,7 +401,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-14 11:59:59.047111",
+ "modified": "2025-07-16 16:33:59.780150",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "DCR MOM Entry",

@@ -40,7 +40,8 @@
    "in_list_view": 1,
    "label": "Sales Person",
    "options": "Sales Person",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fetch_from": "sales_person.employee",
@@ -50,7 +51,8 @@
    "label": "Employee",
    "options": "Employee",
    "read_only": 1,
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fetch_from": "employee.designation",
@@ -108,7 +110,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-10 10:05:12.523864",
+ "modified": "2025-07-16 14:15:24.220661",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "Territory Coverage Master",
