@@ -71,6 +71,7 @@ doctype_js = {
 	"Customer" : "public/js/doctype_custom/customer.js",
 	"Territory": "public/js/doctype_custom/territory.js",
 	"Attendance" : "public/js/doctype_custom/attendance.js",
+    "Designation" : "public/js/doctype_custom/designation.js",
 	"Distance Chart": "public/js/leaflet-routing-machine.js",
 	"Distance Chart": "public/js/Control.Geocoder.js",
 	"DCR Visit Entry": "public/js/leaflet-routing-machine.js",

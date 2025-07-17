@@ -1,26 +1,26 @@
 {
  "actions": [],
  "autoname": "autoincrement",
- "creation": "2025-07-10 09:43:02.696934",
+ "creation": "2025-07-17 10:24:14.973741",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "territory_type",
   "allowance_type",
   "allowance_amount",
+  "freequency",
   "eligibility_type",
-  "employee"
+  "column_break_5rlu"
  ],
  "fields": [
   {
-   "fieldname": "territory_type",
+   "fieldname": "allowance_type",
    "fieldtype": "Link",
-   "hidden": 1,
    "in_list_view": 1,
    "in_preview": 1,
-   "label": "Territory Type",
-   "options": "Territory Type"
+   "label": "Allowance Type",
+   "options": "Allowance Type",
+   "reqd": 1
   },
   {
    "fieldname": "allowance_amount",
@@ -30,23 +30,17 @@
    "label": "Allowance Amount"
   },
   {
-   "fieldname": "employee",
-   "fieldtype": "Link",
+   "fieldname": "freequency",
+   "fieldtype": "Select",
    "in_list_view": 1,
    "in_preview": 1,
-   "label": "Employee",
-   "options": "Employee",
-   "read_only": 1,
+   "label": "Freequency",
+   "options": "Daily\nWeekly\nMonthly",
    "reqd": 1
   },
   {
-   "fieldname": "allowance_type",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_preview": 1,
-   "label": "Allowance Type",
-   "options": "Allowance Type",
-   "reqd": 1
+   "fieldname": "column_break_5rlu",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "eligibility_type",
@@ -62,10 +56,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-07-17 15:42:13.262846",
+ "modified": "2025-07-17 15:36:29.330423",
  "modified_by": "Administrator",
  "module": "Reliforce",
- "name": "Daily Allowance Detail",
+ "name": "Allowance Detail",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [],
