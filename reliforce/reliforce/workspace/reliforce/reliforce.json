@@ -253,9 +253,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Employee Eligibility Type",
+   "label": "Eligibility Type",
    "link_count": 0,
-   "link_to": "Employee Eligibility Type",
+   "link_to": "Eligibility Type",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -311,7 +311,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-07-17 17:14:01.592088",
+ "modified": "2025-07-17 17:24:44.670170",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "Reliforce",

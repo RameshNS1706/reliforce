@@ -46,10 +46,11 @@ frappe.ui.form.on("Daily Allowance Master", {
             var tabletransfer= frappe.model.get_doc("Designation", frm.doc.designation);
             cur_frm.clear_table("allowance_detail");
             $.each(tabletransfer.custom_allowance_detail, function(index, row){
-				if(row.freequency=='Daily') 
+				//if(row.freequency=='Daily') 
                 var d = frm.add_child("allowance_detail");
                 d.allowance_type = row.allowance_type;
                 d.allowance_amount = row.allowance_amount;
+				d.freequency = row.freequency
 				d.eligibility_type = row.eligibility_type
 				d.employee = frm.doc.employee
                 frm.refresh_field("allowance_detail");
