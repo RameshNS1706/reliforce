@@ -95,7 +95,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reliforce Masters",
-   "link_count": 21,
+   "link_count": 22,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -243,6 +243,16 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Territory Type",
+   "link_count": 0,
+   "link_to": "Territory Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Expense Claim Type",
    "link_count": 0,
    "link_to": "Expense Claim Type",
@@ -311,7 +321,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-07-17 17:24:44.670170",
+ "modified": "2025-07-18 10:36:44.278107",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "Reliforce",

@@ -278,6 +278,7 @@
   },
   {
    "default": "0",
+   "depends_on": "eval:doc.contact_availability_status=='Available'",
    "fieldname": "product_sample",
    "fieldtype": "Check",
    "label": "Product Sample"
@@ -401,7 +402,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-16 16:33:59.780150",
+ "modified": "2025-07-18 12:19:14.437420",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "DCR MOM Entry",

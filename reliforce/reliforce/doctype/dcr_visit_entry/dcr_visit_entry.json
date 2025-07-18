@@ -183,9 +183,11 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval: doc.visit_type =='Lead Visit' && doc.latitude",
    "fieldname": "lead",
    "fieldtype": "Link",
    "label": "Lead",
+   "mandatory_depends_on": "eval: doc.visit_type =='Lead Visit'",
    "options": "Lead",
    "reqd": 1
   },
@@ -205,9 +207,11 @@
    "read_only": 1
   },
   {
+   "depends_on": "eval: doc.visit_type=='Customer Visit' && doc.latitude",
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
+   "mandatory_depends_on": "eval: doc.visit_type=='Customer Visit'",
    "options": "Customer",
    "reqd": 1
   },
@@ -239,6 +243,7 @@
    "label": "Territory",
    "options": "Territory",
    "read_only": 1,
+   "read_only_depends_on": "eval:doc.visit_type=='Lead Visit'||doc.visit_type=='Customer Visit'",
    "reqd": 1
   },
   {
@@ -442,9 +447,11 @@
    "label": "Expense Claim"
   },
   {
+   "depends_on": "eval: doc.expense_claim == 1",
    "fieldname": "expense_claim_detail",
    "fieldtype": "Table",
    "label": "Expense Claim Detail",
+   "mandatory_depends_on": "eval: doc.expense_claim == 1",
    "options": "Expense Detail"
   },
   {
@@ -502,7 +509,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-16 17:39:31.539707",
+ "modified": "2025-07-18 11:35:56.750987",
  "modified_by": "Administrator",
  "module": "Reliforce",
  "name": "DCR Visit Entry",
